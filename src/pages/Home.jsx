@@ -1,9 +1,9 @@
 import React from 'react'
-
+import Header from '../components/Header'
 const Home = () => {
     return (
-        <div>
-         <p class="text-blue-600 dark:text-sky-400">The quick brown fox Bruninho...</p>
+        <div className='min-h-screen bg-[#114F5C]'>
+            <Header></Header>
         </div>
     )
 }

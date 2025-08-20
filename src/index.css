@@ -1,6 +1,32 @@
-@import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
 
-*{
-  font-family: "Inter", sans-serif;
+@theme {
+  --color-myOrange: #E56F51;
+  --color-myDarkOrange: #c25a40;
+  --color-backGreen: #279C89;
+  --color-myCyan: #114F5C;
+  --color-myDarkCyan: #09404C;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+@layer components {
+  .line {
+    @apply relative inline-block;
+  }
+
+  .line::after {
+    content: '';
+    @apply absolute -bottom-1 bg-white h-[2px] w-0 transition-all duration-200;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .line:hover::after {
+    @apply w-full;
+  }
 }

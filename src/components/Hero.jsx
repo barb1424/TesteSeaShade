@@ -3,7 +3,7 @@ import decoracaolg from "../assets/decoracaolg.svg";
 const Hero = () => {
 
     return(
-            <div className="text-white h-screen relative">
+            <div className="text-slate-100 h-screen relative">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-start pt-56">
                 <h2>
                     <span className="text-2xl">Seu negócio</span><br />

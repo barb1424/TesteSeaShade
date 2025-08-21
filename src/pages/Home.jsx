@@ -3,7 +3,7 @@ import Header from '../components/Header'
 import Hero from '../components/Hero'
 const Home = () => {
     return (
-        <div className='min-h-screen bg-backGreen'>
+        <div className='min-h-screen bg-cyan-600'>
             <Header></Header>
             <Hero/>
         </div>

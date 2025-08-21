@@ -1,4 +1,4 @@
-import logo from "../assets/logoteste.svg";
+import logo from "../assets/logo.svg";
 const Header = () => {
     return (
     <header className="text-white ">
@@ -11,7 +11,7 @@ const Header = () => {
         <img
           src={logo}
           alt="SeaShade Logo"
-          className="h-10 flex-shrink-0"
+          className="h-15 flex-shrink-0"
         />
       </a>
           <nav className="hidden md:flex space-x-14">
@@ -21,7 +21,7 @@ const Header = () => {
             <a href="#" class="line">Contato</a>
           </nav>
           <div>
-            <button className="cursor-pointer bg-myCyan hover:bg-myDarkCyan text-slate-100 px-4 py-2 rounded-full flex items-center space-x-2 transition-colors duration-300 ">
+            <button className="cursor-pointer border-3 border-white hover:bg-white hover:text-black text-slate-100 px-4 py-2 rounded-full flex items-center space-x-2 transition-colors duration-300 font-medium">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5.121 17.804A12.044 12.044 0 0112 15c2.5 0 4.8.8 6.879 2.121M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
               </svg>

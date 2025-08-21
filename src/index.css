@@ -1,15 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
-
-@theme {
-  --color-myOrange: #E56F51;
-  --color-myDarkOrange: #c25a40;
-  --color-backGreen: #279C89;
-  --color-myCyan: #114F5C;
-  --color-myDarkCyan: #09404C;
-  --color-offWhite: #eaf5f2ff;
+@font-face {
+  font-family: "font2";
+  src: url("fonts/BebasNeue-Regular.otf");
 }
+
+@font-face {
+  font-family: "font1";
+  src: url("fonts/Catleya Signature.ttf");
+}
+
+.font1 {
+  font-family: "font1", sans-serif;
+}
+.font2 {
+  font-family: "font2", sans-serif;
+}
+
+/* @theme {
+} */
 
 * {
   font-family: "Roboto", sans-serif;

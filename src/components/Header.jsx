@@ -1,37 +1,121 @@
+
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import logo from "../assets/logo.svg";
+
 const Header = () => {
-    return (
-    <header className="text-white ">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
-          <h1 className="sr-only">
-            SeaShade
-          </h1>
-          <a href="/">
-        <img
-          src={logo}
-          alt="SeaShade Logo"
-          className="h-15 flex-shrink-0"
-        />
-      </a>
-          <nav className="hidden md:flex space-x-14">
-            <a href="#" class="line">Início</a>
-            <a href="#" class="line">Sobre</a>
-            <a href="#" class="line">Planos</a>
-            <a href="#" class="line">Contato</a>
-          </nav>
-          <div>
-            <button className="cursor-pointer border-3 border-white hover:bg-white hover:text-black text-slate-100 px-4 py-2 rounded-full flex items-center space-x-2 transition-colors duration-300 font-medium">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5.121 17.804A12.044 12.044 0 0112 15c2.5 0 4.8.8 6.879 2.121M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  return (
+    <header className=" text-white py-6 px-6 md:px-32">
+      <div className="flex items-center justify-between max-w-7xl mx-auto">
+        <Link to="/">
+          <img src={logo} alt="SeaShade Logo" className="h-12 w-auto" />
+        </Link>
+        <nav className="hidden xl:flex items-center space-x-12">
+          <Link to="/" className="p-3 font-semibold text-base hover:underline decoration-blue-400">Início</Link>
+          <Link to="/sobre" className="p-3 font-semibold text-base hover:underline decoration-blue-400">Sobre</Link>
+          <Link to="/planos" className="p-3 font-semibold text-base hover:underline decoration-blue-400">Planos</Link>
+          <Link to="/contato" className="p-3 font-semibold text-base hover:underline decoration-blue-400">Contato</Link>
+        </nav>
+        <div className="hidden xl:flex items-center">
+          <Link to="/entrar">
+            <button className="border-2 border-white hover:bg-white hover:text-black text-white px-4 py-2 rounded-full flex items-center space-x-2 transition-colors duration-300 font-medium">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M5.121 17.804A12.044 12.044 0 0112 15c2.5 0 4.8.8 6.879 2.121M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                />
               </svg>
               <span>Entrar</span>
             </button>
-          </div>
+          </Link>
         </div>
+
+        {/* Menu Hambúrguer (Mobile) */}
+        <div className="xl:hidden">
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="text-white focus:outline-none"
+          >
+            <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d={isMenuOpen ? 'M6 18L18 6M6 6l12 12' : 'M4 6h16M4 12h16m-7 6h7'}
+              />
+            </svg>
+          </button>
+        </div>
+
+        {/* Menu Mobile */}
+        {isMenuOpen && (
+          <nav className="xl:hidden bg-gray-700 px-4 py-2 absolute top-16 left-0 w-full">
+            <Link
+              to="/"
+              className="block py-2 font-semibold text-base hover:text-gray-300"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Início
+            </Link>
+            <Link
+              to="/sobre"
+              className="block py-2 font-semibold text-base hover:text-gray-300"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Sobre
+            </Link>
+            <Link
+              to="/planos"
+              className="block py-2 font-semibold text-base hover:text-gray-300"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Planos
+            </Link>
+            <Link
+              to="/contato"
+              className="block py-2 font-semibold text-base hover:text-gray-300"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Contato
+            </Link>
+            <Link
+              to="/entrar"
+              className="block py-2"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              <button className="border-2 border-white hover:bg-white hover:text-black text-white px-4 py-2 rounded-full flex items-center space-x-2 transition-colors duration-300 font-medium">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M5.121 17.804A12.044 12.044 0 0112 15c2.5 0 4.8.8 6.879 2.121M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                  />
+                </svg>
+                <span>Entrar</span>
+              </button>
+            </Link>
+          </nav>
+        )}
       </div>
     </header>
-    );
-}
+  );
+};
 
 export default Header;

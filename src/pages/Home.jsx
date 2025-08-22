@@ -3,8 +3,9 @@ import Header from '../components/Header'
 import Hero from '../components/Hero'
 const Home = () => {
     return (
-        <div className='min-h-screen bg-cyan-600'>
+        <div className=' bg-cyan-600 min-h-screen flex flex-col'>
             <Header></Header>
+
             <Hero/>
         </div>
     )

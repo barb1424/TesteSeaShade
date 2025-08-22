@@ -13,13 +13,13 @@ const Header = () => {
           <img src={logo} alt="SeaShade Logo" className="h-12 w-auto" />
         </Link>
         <nav className="hidden xl:flex items-center space-x-12">
-          <Link to="/" className="p-3 font-semibold text-base hover:underline decoration-blue-400">Início</Link>
-          <Link to="/sobre" className="p-3 font-semibold text-base hover:underline decoration-blue-400">Sobre</Link>
-          <Link to="/planos" className="p-3 font-semibold text-base hover:underline decoration-blue-400">Planos</Link>
-          <Link to="/contato" className="p-3 font-semibold text-base hover:underline decoration-blue-400">Contato</Link>
+          <Link to="/" className="p-3 font-semibold text-base">Início</Link>
+          <Link to="/sobre" className="p-3 font-semibold text-base">Sobre</Link>
+          <Link to="/planos" className="p-3 font-semibold text-base">Planos</Link>
+          <Link to="/contato" className="p-3 font-semibold text-base">Contato</Link>
         </nav>
         <div className="hidden xl:flex items-center">
-          <Link to="/entrar">
+          <Link to="/login">
             <button className="border-2 border-white hover:bg-white hover:text-black text-white px-4 py-2 rounded-full flex items-center space-x-2 transition-colors duration-300 font-medium">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -93,7 +93,7 @@ const Header = () => {
               className="block py-2"
               onClick={() => setIsMenuOpen(false)}
             >
-              <button className="border-2 border-white hover:bg-white hover:text-black text-white px-4 py-2 rounded-full flex items-center space-x-2 transition-colors duration-300 font-medium">
+              <button className=" border-2 border-white hover:bg-white hover:text-black text-white px-4 py-2 rounded-full flex items-center space-x-2 transition-colors duration-300 font-medium">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-5 w-5"
@@ -108,7 +108,7 @@ const Header = () => {
                     d="M5.121 17.804A12.044 12.044 0 0112 15c2.5 0 4.8.8 6.879 2.121M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                   />
                 </svg>
-                <span>Entrar</span>
+                <span> classname=""Entrar</span>
               </button>
             </Link>
           </nav>

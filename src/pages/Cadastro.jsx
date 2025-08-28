@@ -9,19 +9,19 @@ const Cadastro = () => {
  const[name, setName] = useState('');
  const[barraca,setBarraca] = useState('');
   return (
-    <div className=" bg-slate-100 min-h-screen flex flex-col gap-6">
+    <div className=" bg-slate-100 min-h-screen flex flex-col gap-1 md:gap-6">
       <Header />
-        <main className="flex-1 h-screen flex flex-col items-center gap-5">
+        <main className=" flex-1 flex flex-col items-center gap-5">
           <div className="flex flex-col items-center">
-        <h1 className=" flex items-center text-4xl font-medium p-4 text-indigo-950 gap-3"><PiUserCirclePlus size="35" strokeWidth={4}/> Cadastre-se</h1>
-        <h2 className="text-indigo-800 text-center">Novo por aqui? Você pode concluir seu cadastro ou <br/>ir para a<Link to="/login"><span className="border-b hover:text-indigo-600"> área de login</span></Link></h2>
+        <h1 className="  flex-wrap flex items-center text-4xl font-medium px-4 py-4 text-indigo-950 gap-3"><PiUserCirclePlus size="35" strokeWidth={4}/> Cadastre-se</h1>
+        <h2 className="text-indigo-800 text-center flex-wrap">Novo por aqui? Você pode concluir seu cadastro ou ir para a<Link to="/login"><span className="border-b hover:text-indigo-600"> área de login</span></Link></h2>
         </div>
-        <form>
-          <fieldset className="flex flex-col gap-6">
+        <form className="w-full md: md:max-w-md max-w-sm mx-auto">
+          <fieldset className="w-full flex flex-col gap-3">
              <label className="text-xl flex flex-col gap-2">
                Nome <br/>
               <input 
-              className=" hover:border-slate-200 focus:ring focus:outline-none focus:border-indigo-600 bg-white py-4 lg:py-3 px-6 rounded border border-slate-300 text-slate-500 w-100 md:w-110"
+              className=" hover:border-slate-200 focus:ring focus:outline-none focus:border-indigo-600 bg-white py-4 lg:py-3 px-6 rounded border border-slate-300 text-slate-500 w-full"
               value = {name}
               type='text'
               placeholder='Seu nome completo'
@@ -32,11 +32,11 @@ const Cadastro = () => {
             <label className="text-xl flex flex-col gap-2">
                Barraca <br/>
               <input 
-              className=" hover:border-slate-200 focus:ring focus:outline-none focus:border-indigo-600 bg-white py-4 lg:py-3 px-6 rounded border border-slate-300 text-slate-500 w-100 md:w-110"
-              value = {name}
+              className=" hover:border-slate-200 focus:ring focus:outline-none focus:border-indigo-600 bg-white py-4 lg:py-3 px-6 rounded border border-slate-300 text-slate-500 w-full"
+              value = {barraca}
               type='text'
               placeholder='Nome da sua barraca / quiosque'
-              onChange={e=> setName(e.target.value)}
+              onChange={e=> setBarraca(e.target.value)}
               />
               
               
@@ -45,7 +45,7 @@ const Cadastro = () => {
             <label className="text-xl flex flex-col gap-2">
                E-mail: <br/>
               <input 
-              className=" hover:border-slate-200 focus:ring focus:outline-none focus:border-indigo-600 bg-white py-4 lg:py-3 px-6 rounded border border-slate-300 text-slate-500 w-100 md:w-110"
+              className=" hover:border-slate-200 focus:ring focus:outline-none focus:border-indigo-600 bg-white py-4 lg:py-3 px-6 rounded border border-slate-300 text-slate-500 w-full"
               value = {email}
               type='text'
               placeholder='Ex: email@hotmail.com'
@@ -56,15 +56,15 @@ const Cadastro = () => {
             <label className="text-xl flex flex-col gap-2">
               Senha:
               <input 
-              className="hover:border-slate-200 focus:ring focus:outline-none focus:border-indigo-600 bg-white py-4 lg:py-3 px-6 rounded border border-slate-300 text-slate-500"
+              className="hover:border-slate-200 focus:ring focus:outline-none focus:border-indigo-600 bg-white py-4 lg:py-3 px-6 rounded border border-slate-300 text-slate-500 w-full"
               value={pass}
               type='password'
               placeholder='••••••••••••'
               onChange={e=> setPass(e.target.value)}
               />
             </label>
-            <div className="text-2xl flex flex-col">
-          <button className="bg-orange-500 text-white py-4 lg:py-3 font-medium transition-color duration-300 hover:bg-orange-400 cursor-pointer" type="submit">Cadastrar</button>
+            <div className="text-xl flex flex-col">
+          <button className=" flex flex-col bg-orange-500 text-white py-4 lg:py-3 font-medium transition-color duration-300 hover:bg-orange-400 cursor-pointer w-full" type="submit">Cadastrar</button>
           </div>
           </fieldset>
         </form>

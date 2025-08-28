@@ -1,28 +1,62 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
 @import "tailwindcss";
-@font-face {
-  font-family: "font2";
-  src: url("fonts/BebasNeue-Regular.otf");
-}
 
-@font-face {
-  font-family: "font1";
-  src: url("fonts/Catleya Signature.ttf");
-}
+@theme {
+  --color-laranja-1000: #260F03;
+  --color-laranja-950: #4B1F07;
+  --color-laranja-900: #712E0A;
+  --color-laranja-800: #963E0D;
+  --color-laranja-700: #BC4D10;
+  --color-laranja-600: #E15C14;
+  --color-laranja-500: #ED7331;
+  --color-laranja-400: #F08D56;
+  --color-laranja-300: #F4A67C;
+  --color-laranja-200: #F7C0A1;
+  --color-laranja-100: #FAD9C7;
+  --color-laranja-50: #FDF2EC;
 
-.font1 {
-  font-family: "font1", sans-serif;
-}
-.font2 {
-  font-family: "font2", sans-serif;
-}
+  --color-amarelo-1000: #271902;
+  --color-amarelo-950: #4E3204;
+  --color-amarelo-900: #754B05;
+  --color-amarelo-800: #9C6507;
+  --color-amarelo-700: #C37E09;
+  --color-amarelo-600: #EA970B;
+  --color-amarelo-500: #F5A929;
+  --color-amarelo-400: #F7B950;
+  --color-amarelo-300: #F9C877;
+  --color-amarelo-200: #FAD89E;
+  --color-amarelo-100: #FCE8C5;
+  --color-amarelo-50: #FEF7EC;
 
-/* @theme {
-} */
+  --color-azul-1000: #041625;
+  --color-azul-950: #082B4A;
+  --color-azul-900: #0C416E;
+  --color-azul-800: #105693;
+  --color-azul-700: #146CB8;
+  --color-azul-600: #1881DD;
+  --color-azul-500: #3495E9;
+  --color-azul-400: #59A8ED;
+  --color-azul-300: #7EBCF1;
+  --color-azul-200: #A3CFF5;
+  --color-azul-100: #C8E2F9;
+  --color-azul-50: #EDF5FD;
+
+  --color-roxo-1000: #0E0C1D;
+  --color-roxo-950: #1C1839;
+  --color-roxo-900: #292456;
+  --color-roxo-800: #373073;
+  --color-roxo-700: #453D8F;
+  --color-roxo-600: #5349AC;
+  --color-roxo-500: #6B61BC;
+  --color-roxo-400: #867EC8;
+  --color-roxo-300: #A19BD5;
+  --color-roxo-200: #BCB7E1;
+  --color-roxo-100: #D7D4ED;
+  --color-roxo-50: #F2F1F9;
+}
 
 * {
-  font-family: "Roboto", sans-serif;
+  font-family: "Instrument Sans", sans-serif;
 }
 
 @layer components {
@@ -32,7 +66,7 @@
 
   .line::after {
     content: '';
-    @apply absolute -bottom-1 bg-white h-[2px] w-0 transition-all duration-200;
+    @apply absolute -bottom-1 bg-slate-50 h-[2px] w-0 transition-all duration-200;
     left: 50%;
     transform: translateX(-50%);
   }
@@ -40,4 +74,8 @@
   .line:hover::after {
     @apply w-full;
   }
+}
+
+.span{
+  color: orange
 }

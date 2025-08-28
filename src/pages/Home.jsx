@@ -12,12 +12,12 @@ const Home = () => {
       <div className="relative z-10 w-full max-w-screen-xl mx-auto flex-1 flex flex-col justify-center px-4">
         <main className="flex-1 mt-15 md:mt-45 md:text-left">
           <h1 className="text-xl md:text-3xl font-bold sm:text-4xl">
-            <span className="text-slate-50 font-light tracking-wide">
+            <span className="text-slate-50 font-light tracking-wide ">
               Seu negócio
             </span><br />
-            <strong className="md:text-7xl sm:text-[80px] text-[44px] leading-tight  text-slate-50">
+            <strong className="md:text-7xl sm:text-[80px] text-[44px] leading-tight break-words text-slate-50">
               SEGURO &<br />
-              <span className="bg-linear-to-r from-yellow-500 to-orange-500 bg-clip-text text-transparent">ORGANIZADO.</span>
+              <span className="bg-linear-to-r from-yellow-500 to-orange-500 bg-clip-text text-transparent break-words">ORGANIZADO.</span>
             </strong><br />
           </h1>
 

@@ -9,7 +9,7 @@ const Cadastro = () => {
  const[name, setName] = useState('');
  const[barraca,setBarraca] = useState('');
   return (
-    <div className=" bg-slate-100 min-h-screen flex flex-col gap-1 md:gap-6">
+    <div className=" bg-slate-100 h-screen flex flex-col gap-1 md:gap-6">
       <Header />
         <main className=" flex-1 flex flex-col items-center gap-5">
           <div className="flex flex-col items-center">

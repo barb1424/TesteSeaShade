@@ -11,7 +11,7 @@ const Cadastro = () => {
   return (
     <div className=" bg-slate-100 h-screen flex flex-col gap-1 md:gap-6">
       <Header />
-        <main className=" flex-1 flex flex-col items-center gap-5">
+        <main className="m-3 flex-1 flex flex-col items-center gap-5">
           <div className="flex flex-col items-center">
         <h1 className="  flex-wrap flex items-center text-4xl font-medium px-4 py-4 text-indigo-950 gap-3"><PiUserCirclePlus size="35" strokeWidth={4}/> Cadastre-se</h1>
         <h2 className="text-indigo-800 text-center flex-wrap">Novo por aqui? Você pode concluir seu cadastro ou ir para a<Link to="/login"><span className="border-b hover:text-indigo-600"> área de login</span></Link></h2>
@@ -35,7 +35,7 @@ const Cadastro = () => {
               className=" hover:border-slate-200 focus:ring focus:outline-none focus:border-indigo-600 bg-white py-4 lg:py-3 px-6 rounded border border-slate-300 text-slate-500 w-full"
               value = {barraca}
               type='text'
-              placeholder='Nome da sua barraca / quiosque'
+              placeholder='Nome da sua barraca/quiosque'
               onChange={e=> setBarraca(e.target.value)}
               />
               

@@ -13,7 +13,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="bg-linear-to-r from-azul-700 to-sky-600 text-white py-5 relative z-20">
+    <header className="bg-sky-600 text-white py-5 relative z-20">
       {/* Container interno para o conteúdo, com padding e centralização */}
       <div className="max-w-screen-xl mx-auto flex items-center justify-between px-4">
         {/* Logo */}
@@ -48,7 +48,7 @@ const Header = () => {
 
       {/* Menu Hamburguer (Mobile) */}
       <div
-        className={`fixed top-0 right-0 h-screen w-full bg-linear-to-r from-azul-700 to-sky-600 z-50 transform transition-transform duration-300 ease-in-out ${isMenuOpen ? "translate-x-0" : "translate-x-full"}`}
+        className={`fixed top-0 right-0 h-screen w-full bg-sky-600 z-50 transform transition-transform duration-300 ease-in-out ${isMenuOpen ? "translate-x-0" : "translate-x-full"}`}
       >
         <div className="flex justify-between items-center p-5 px-10">
           <img src={logo} alt="SeaShade Logo" className="max-w-24 object-cover" />

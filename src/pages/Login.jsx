@@ -9,9 +9,9 @@ const Login = () => {
   return (
     <div className="bg-slate-100 min-h-screen flex flex-col gap-1 md:gap-6">
       <Header />
-        <main className=" flex-1 flex flex-col items-center gap-5">
+        <main className="m-3 flex-1 flex flex-col items-center gap-5">
           <div className="flex flex-col items-center">
-        <h1 className="  flex-wrap flex items-center text-4xl font-medium px-4 py-4 text-indigo-950 gap-3"><PiUserCircle size="35" strokeWidth={4}/> Entre na sua conta</h1>
+        <h1 className="  flex-wrap flex items-center text-3xl font-medium px-4 py-4 text-indigo-950 gap-3"><PiUserCircle size="35" strokeWidth={4}/> Entre na sua conta</h1>
        <h2 className="text-indigo-800 text-center flex-wrap">Não tem uma conta ainda? <Link to="/cadastro"><span className="border-b hover:text-indigo-600">cadastre-se aqui</span></Link></h2>
         </div>
         <form className="w-full md: md:max-w-md max-w-sm mx-auto">

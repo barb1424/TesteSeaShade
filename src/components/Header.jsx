@@ -1,8 +1,6 @@
 import { useState } from "react";
 import { Link } from 'react-router-dom';
 import logo from "../assets/logo.svg";
-import { FiMenu } from "react-icons/fi";
-import { IoClose } from "react-icons/io5";
 import { PiUserCircle } from "react-icons/pi";
 import { House, NotepadText, Package, MailOpen, Menu, X } from 'lucide-react';
 

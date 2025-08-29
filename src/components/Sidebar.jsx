@@ -3,19 +3,19 @@ import { useState } from "react";
 import logo from "../assets/darklogo.svg";
 const Sidebar = () => {
 
-    const[expanded, setExpanded] = useState(true);
+    const[expanded, setExpanded] = useState(false);
 
     return (
-        <aside className={`transition-all duration-300 border-b border-slate-300 border-r h-screen flex bg-slate-100 shadow-sm flex-col ${expanded? "w-2/3 md:w-1/3 lg:w-1/5" : "w-16"}`}>
+        <aside className={`fixed transition-all duration-300 border-b border-slate-300 border-r h-screen flex bg-slate-50 shadow-sm flex-col ${expanded? "w-2/3 md:w-1/3 lg:w-1/5" : "w-16"}`}>
         <header className="text-slate-600 w-full flex flex-col  font-medium  h-full">
-            <div className="flex items-center text-slate-600 mb-2">
+            <div className="flex justify-center items-center text-slate-600 mb-2">
 
                 <div className={`flex overflow-hidden transition-all duration-300${expanded? "p-4 pl-6 flex-grow" : "justify-center w-0"} `}>
                     <img src={logo} alt="Logo do Seashade" className="w-28"/>
                 </div>
 
                 <button onClick={() => setExpanded(!expanded)} className={`py-4 px-4 flex cursor-pointer hover:bg-slate-200 transition-all duration-300 ${expanded ? "" : ""}`}>
-                    {expanded? <ChevronFirst size="32"/>: <ChevronLast size="32"/>}
+                    {expanded? <ChevronFirst size="28"/>: <ChevronLast size="28"/>}
                 </button>
 
             </div>

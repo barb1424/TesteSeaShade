@@ -4,7 +4,7 @@ import { PiUserCircle } from "react-icons/pi";
 import { Link } from 'react-router-dom';
 
 const Login = () => {
- const[name, setName] = useState('');
+ const[email, setEmail] = useState('');
  const[pass, setPass] = useState('')
   return (
     <div className="bg-slate-100 min-h-screen flex flex-col gap-1 md:gap-6">
@@ -19,18 +19,18 @@ const Login = () => {
             <label className="text-xl flex flex-col gap-2">
                E-mail: <br/>
               <input 
-              className=" hover:border-slate-200 focus:ring focus:outline-none focus:border-indigo-600 bg-white py-4 lg:py-3 px-6 rounded border border-slate-300 text-slate-900 w-full"
-              value = {name}
-              type='text'
+              className="inset-shadow-xs focus:ring focus:outline-none focus:border-indigo-600 bg-white py-4 lg:py-3 px-5 rounded border border-slate-300 text-slate-900 w-full"
+              value = {email}
+              type='email'
               placeholder='ex: email@hotmail.com'
-              onChange={e=> setName(e.target.value)}
+              onChange={e=> setEmail(e.target.value)}
               />
             </label>
 
             <label className="text-xl flex flex-col gap-2">
               Senha:
               <input 
-              className=" hover:border-slate-200 focus:ring focus:outline-none focus:border-indigo-600 bg-white py-4 lg:py-3 px-6 rounded border border-slate-300 text-slate-900 w-full"
+              className="inset-shadow-xs focus:ring focus:outline-none focus:border-indigo-600 bg-white py-4 lg:py-3 px-5 rounded border border-slate-300 text-slate-900 w-full"
               value={pass}
               type='password'
               placeholder='••••••••••••'

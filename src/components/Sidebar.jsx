@@ -10,7 +10,7 @@ const Sidebar = () => {
         <header className="text-slate-600 w-full flex flex-col  font-medium  h-full">
             <div className="flex items-center text-slate-600 mb-2">
 
-                <div className={`flex-1 overflow-hidden transition-all duration-300${expanded? "p-4 pl-6 flex-grow" : "w-0"} `}>
+                <div className={`flex overflow-hidden transition-all duration-300${expanded? "p-4 pl-6 flex-grow" : "justify-center w-0"} `}>
                     <img src={logo} alt="Logo do Seashade" className="w-28"/>
                 </div>
 
@@ -19,18 +19,28 @@ const Sidebar = () => {
                 </button>
 
             </div>
-            <nav className="text-lg flex flex-col px-3 gap-2">
+            <nav className={`text-lg flex flex-col gap-2 ${expanded? "px-3" : "items-center"}`}>
                 <ul className="flex flex-col flex-3 border-b border-azul-100 pb-2">
-                    <li className="cursor-pointer h-full flex p-2 items-center hover:bg-azul-100 hover:text-azul-600 rounded-lg transition-all duration-300 truncate"><div className="min-w-10"><LayoutPanelLeft/></div><div className={`${expanded? "flex-grow" : "overflow-hidden transition-all w-0"}`}>Painel</div></li>
-                    <li className="cursor-pointer h-full flex p-2 items-center hover:bg-azul-100 hover:text-azul-600 rounded-lg transition-all duration-300 truncate"><div className="min-w-10"><NotebookPen/></div><div className={`${expanded? "flex-grow" : "overflow-hidden transition-all w-0"}`}>Pedidos</div></li>
-                    <li className="cursor-pointer h-full flex p-2 items-center hover:bg-azul-100 hover:text-azul-600 rounded-lg transition-all duration-300 truncate"><div className="min-w-10"><BookOpenText/></div><div className={`${expanded? "flex-grow" : "overflow-hidden transition-all w-0"}`}>Cardápio</div></li>
-                    <li className="cursor-pointer h-full flex p-2 items-center hover:bg-azul-100 hover:text-azul-600 rounded-lg transition-all duration-300 truncate"><div className="min-w-10"><PackageOpen/></div><div className={`${expanded? "flex-grow" : "overflow-hidden transition-all w-0"}`}>Estoque</div></li>
-                    <li className="cursor-pointer h-full flex p-2 items-center hover:bg-azul-100 hover:text-azul-600 rounded-lg transition-all duration-300 truncate"><div className="min-w-10"><ChartSpline/></div><div className={`${expanded? "flex-grow" : "overflow-hidden transition-all w-0"}`}>Relatórios</div></li>
-                    <li className="cursor-pointer h-full flex p-2 items-center hover:bg-azul-100 hover:text-azul-600 rounded-lg transition-all duration-300 truncate"><div className="min-w-10"><ChefHat/></div><div className={`${expanded? "flex-grow" : "overflow-hidden transition-all w-0"}`}>Modo Produção</div></li>
+                    
+                    <li className="cursor-pointer h-full flex p-2 items-center hover:bg-azul-100 hover:text-azul-600 rounded-lg transition-all duration-300 truncate"><div className={`flex min-w-10 ${expanded? "" : "justify-center"}`}><LayoutPanelLeft/></div><div className={`${expanded? "flex-grow" : "overflow-hidden transition-all w-0"}`}>Painel</div></li>
+
+                    <li className="cursor-pointer h-full flex p-2 items-center hover:bg-azul-100 hover:text-azul-600 rounded-lg transition-all duration-300 truncate"><div className={`flex min-w-10 ${expanded? "" : "justify-center"}`}><NotebookPen/></div><div className={`${expanded? "flex-grow" : "overflow-hidden transition-all w-0"}`}>Pedidos</div></li>
+
+                    <li className="cursor-pointer h-full flex p-2 items-center hover:bg-azul-100 hover:text-azul-600 rounded-lg transition-all duration-300 truncate"><div className={`flex min-w-10 ${expanded? "" : "justify-center"}`}><BookOpenText/></div><div className={`${expanded? "flex-grow" : "overflow-hidden transition-all w-0"}`}>Cardápio</div></li>
+
+                    <li className="cursor-pointer h-full flex p-2 items-center hover:bg-azul-100 hover:text-azul-600 rounded-lg transition-all duration-300 truncate"><div className={`flex min-w-10 ${expanded? "" : "justify-center"}`}><PackageOpen/></div><div className={`${expanded? "flex-grow" : "overflow-hidden transition-all w-0"}`}>Estoque</div></li>
+
+                    <li className="cursor-pointer h-full flex p-2 items-center hover:bg-azul-100 hover:text-azul-600 rounded-lg transition-all duration-300 truncate"><div className={`flex min-w-10 ${expanded? "" : "justify-center"}`}><ChartSpline/></div><div className={`${expanded? "flex-grow" : "overflow-hidden transition-all w-0"}`}>Relatórios</div></li>
+
+                    <li className="cursor-pointer h-full flex p-2 items-center hover:bg-azul-100 hover:text-azul-600 rounded-lg transition-all duration-300 truncate"><div className={`flex min-w-10 ${expanded? "" : "justify-center"}`}><ChefHat/></div><div className={`${expanded? "flex-grow" : "overflow-hidden transition-all w-0"}`}>Modo Produção</div></li>
+
                 </ul>
                 <ul className="flex flex-col flex-1 justify-around">
-                    <li className="cursor-pointer h-full flex p-2 items-center hover:bg-azul-100 hover:text-azul-600 rounded-lg transition-all duration-300 truncate"><div className="min-w-10"><Info/></div><div className={`${expanded? "flex-grow" : "overflow-hidden transition-all w-0"}`}>Ajuda</div></li>
-                    <li className="cursor-pointer h-full flex p-2 items-center hover:bg-azul-100 hover:text-azul-600 rounded-lg transition-all duration-300 truncate"><div className="min-w-10"><Settings /></div><div className={`${expanded? "flex-grow" : "overflow-hidden transition-all duration-300 w-0"}`}>Configurações</div></li>
+
+                    <li className="cursor-pointer h-full flex p-2 items-center hover:bg-azul-100 hover:text-azul-600 rounded-lg transition-all duration-300 truncate"><div className={`flex min-w-10 ${expanded? "" : "justify-center"}`}><Info/></div><div className={`${expanded? "flex-grow" : "overflow-hidden transition-all w-0"}`}>Ajuda</div></li>
+
+                    <li className="cursor-pointer h-full flex p-2 items-center hover:bg-azul-100 hover:text-azul-600 rounded-lg transition-all duration-300 truncate"><div className={`flex min-w-10 ${expanded? "" : "justify-center"}`}><Settings /></div><div className={`${expanded? "flex-grow" : "overflow-hidden transition-all duration-300 w-0"}`}>Configurações</div></li>
+
                 </ul>
         </nav>
     </header>

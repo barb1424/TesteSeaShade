@@ -6,7 +6,7 @@ const Sidebar = () => {
     const[expanded, setExpanded] = useState(true);
 
     return (
-        <aside className={`transition-all duration-300 border-b border-azul-100 border-r h-screen flex bg-slate-100 shadow-sm flex-col ${expanded? "w-2/3 md:w-1/3 lg:w-1/5" : "w-16"}`}>
+        <aside className={`transition-all duration-300 border-b border-slate-300 border-r h-screen flex bg-slate-100 shadow-sm flex-col ${expanded? "w-2/3 md:w-1/3 lg:w-1/5" : "w-16"}`}>
         <header className="text-slate-600 w-full flex flex-col  font-medium  h-full">
             <div className="flex items-center text-slate-600 mb-2">
 
@@ -20,7 +20,7 @@ const Sidebar = () => {
 
             </div>
             <nav className={`text-lg flex flex-col gap-2 ${expanded? "px-3" : "items-center"}`}>
-                <ul className="flex flex-col flex-3 border-b border-azul-100 pb-2">
+                <ul className="flex flex-col flex-3 border-b border-slate-300 pb-2">
                     
                     <li className="cursor-pointer h-full flex p-2 items-center hover:bg-azul-100 hover:text-azul-600 rounded-lg transition-all duration-300 truncate"><div className={`flex min-w-10 ${expanded? "" : "justify-center"}`}><LayoutPanelLeft/></div><div className={`${expanded? "flex-grow" : "overflow-hidden transition-all w-0"}`}>Painel</div></li>
 
@@ -44,7 +44,7 @@ const Sidebar = () => {
                 </ul>
         </nav>
     </header>
-       <div className="relative px-4 cursor-pointer hover:bg-slate-200 transition-all duration-300 flex border-t border-azul-100 text-slate-600 items-center justify-center py-4">
+       <div className="relative px-4 cursor-pointer hover:bg-slate-200 transition-all duration-300 flex border-t border-slate-300 text-slate-600 items-center justify-center py-4">
             <div className={`flex items-center overflow-hidden transition-all duration-300 ${expanded ? "flex-1 gap-3" : "w-0"}`}>
                 <div className="rounded aspect-square bg-azul-200 flex justify-center items-center font-extrabold text-azul-600 w-9 md:w-13">
                     <User size="auto"/>

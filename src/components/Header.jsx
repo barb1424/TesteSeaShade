@@ -3,11 +3,8 @@ import { Link } from 'react-router-dom';
 import logo from "../assets/logo.svg";
 import { FiMenu } from "react-icons/fi";
 import { IoClose } from "react-icons/io5";
-import { LuHouse } from "react-icons/lu";
-import { FaQuestion } from "react-icons/fa6";
-import { FiPackage } from "react-icons/fi";
-import { FaRegEnvelopeOpen } from "react-icons/fa6";
-import { FaRegUserCircle } from "react-icons/fa";
+import { PiUserCircle } from "react-icons/pi";
+import { House, NotepadText, Package, MailOpen, Menu, X } from 'lucide-react';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -40,10 +37,10 @@ const Header = () => {
       </div>
 
       {/* Botão de abrir Menu Hamburguer para Mobile */}
-      <FiMenu
+      <Menu
         onClick={() => setIsMenuOpen(true)}
         className={`text-slate-50 md:hidden cursor-pointer absolute right-4 top-1/2 -translate-y-1/2`}
-        size="45"
+        size="50"
       />
 
       {/* Menu Hamburguer (Mobile) */}
@@ -52,40 +49,40 @@ const Header = () => {
       >
         <div className="flex justify-between items-center p-5 px-10">
           <img src={logo} alt="SeaShade Logo" className="max-w-24 object-cover" />
-          <IoClose onClick={() => setIsMenuOpen(false)} className="text-slate-50 cursor-pointer" size="30" />
+          <X onClick={() => setIsMenuOpen(false)} className="text-slate-50 cursor-pointer" size="30" />
         </div>
         <ul className="pt-7 px-8 flex flex-col gap-9 text-xl">
           <li>
             <Link to="/" className="border-b flex items-center border-azul-300 pb-2.5" onClick={() => setIsMenuOpen(false)}>
-              <div className="flex hover:text-slate-300 transition-color duration-300">
-              <div className="flex justify-center items-center w-8"><LuHouse size={17} /></div>
+              <div className="gap-2 flex hover:text-slate-300 transition-color duration-300">
+              <div className="flex justify-center items-center w-8"><House size={17} /></div>
               Início</div>
             </Link>
           </li>
           <li>
             <Link to="/sobre" className="border-b flex items-center border-azul-300 pb-2.5" onClick={() => setIsMenuOpen(false)}>
-             <div className="flex hover:text-slate-300 transition-color duration-300">
-              <div className="flex justify-center items-center w-8"><FaQuestion size={16} /></div>
+             <div className="gap-2 flex hover:text-slate-300 transition-color duration-300">
+              <div className="flex justify-center items-center w-8"><NotepadText size={17} /></div>
               Sobre</div>
             </Link>
           </li>
           <li>
             <Link to="/planos" className="border-b flex items-center border-azul-300 pb-2.5" onClick={() => setIsMenuOpen(false)}>
-             <div className="flex hover:text-slate-300 transition-color duration-300">
-              <div className="flex justify-center items-center w-8"><FiPackage size={17} /></div>
+             <div className="gap-2 flex hover:text-slate-300 transition-color duration-300">
+              <div className="flex justify-center items-center w-8"><Package size={17} /></div>
               Planos</div>
             </Link>
           </li>
           <li>
             <Link to="/contato" className="border-b flex items-center border-azul-300 pb-2.5" onClick={() => setIsMenuOpen(false)}>
-              <div className="flex hover:text-slate-300 transition-color duration-300">
-              <div className="flex justify-center items-center w-8"><FaRegEnvelopeOpen size={14} /></div>
+              <div className="gap-2 flex hover:text-slate-300 transition-color duration-300">
+              <div className="flex justify-center items-center w-8"><MailOpen size={17} /></div>
               Contato</div>
             </Link>
           </li>
           <li>
             <Link to="/login" className="bg-gradient-to-r from-amber-600 to-orange-600 rounded-sm font-medium justify-center flex items-center gap-2 p-4" onClick={() => setIsMenuOpen(false)}>
-              <div className="flex justify-center items-center w-8"><FaRegUserCircle /></div>
+              <div className="gap-2 flex justify-center items-center w-8"><PiUserCircle /></div>
               Entrar / Cadastrar-se
             </Link>
           </li>

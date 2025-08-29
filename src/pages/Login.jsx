@@ -19,7 +19,7 @@ const Login = () => {
             <label className="text-xl flex flex-col gap-2">
                E-mail: <br/>
               <input 
-              className=" hover:border-slate-200 focus:ring focus:outline-none focus:border-indigo-600 bg-white py-4 lg:py-3 px-6 rounded border border-slate-300 text-slate-500 w-full"
+              className=" hover:border-slate-200 focus:ring focus:outline-none focus:border-indigo-600 bg-white py-4 lg:py-3 px-6 rounded border border-slate-300 text-slate-900 w-full"
               value = {name}
               type='text'
               placeholder='ex: email@hotmail.com'
@@ -30,7 +30,7 @@ const Login = () => {
             <label className="text-xl flex flex-col gap-2">
               Senha:
               <input 
-              className=" hover:border-slate-200 focus:ring focus:outline-none focus:border-indigo-600 bg-white py-4 lg:py-3 px-6 rounded border border-slate-300 text-slate-500 w-full"
+              className=" hover:border-slate-200 focus:ring focus:outline-none focus:border-indigo-600 bg-white py-4 lg:py-3 px-6 rounded border border-slate-300 text-slate-900 w-full"
               value={pass}
               type='password'
               placeholder='••••••••••••'

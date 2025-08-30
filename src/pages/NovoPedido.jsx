@@ -45,13 +45,7 @@ const quantidade = 14;
                         </fieldset>
                     </form>
                 </div>
-                <div className="flex flex-col gap-2">
-                    <p className="text-lg font-bold">Guarda-sóis: <span className="text-orange-500">{quantidade}</span></p>
-                    <div className="flex">
-                        {/* Implementar numeração nos guarda-sóis e função ocupado ou livre. Torna-los clicáveis. O guarda-sol clicado o numero irá para o input; Se estiver ocupado a cor do icone será text-red-500 */}
-                     <IconList quantidade={quantidade}/>
-                    </div>
-                </div>
+                
             </main>
         </div>
         </div>

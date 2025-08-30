@@ -17,8 +17,8 @@ const Home = () => {
               Seu negócio
             </span><br />
             <strong className="md:text-7xl sm:text-[80px] text-[44px] leading-tight break-words text-slate-50">
-              SEGURO &<br />
-              <span className="break-words">ORGANIZADO.</span>
+              Seguro &<br />
+              <span className="break-words">Organizado.</span>
             </strong><br />
           </h1>
 

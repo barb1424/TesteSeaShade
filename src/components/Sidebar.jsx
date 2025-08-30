@@ -1,6 +1,8 @@
 import { LayoutPanelLeft, NotebookPen, BookOpenText, PackageOpen, ChartSpline, ChefHat, Info, ChevronFirst, ChevronLast, User, EllipsisVertical, Settings } from "lucide-react";
 import { useState } from "react";
 import logo from "../assets/darklogo.svg";
+import { Link } from 'react-router-dom';
+
 const Sidebar = () => {
 
     const[expanded, setExpanded] = useState(false);
@@ -22,24 +24,24 @@ const Sidebar = () => {
             <nav className={`text-lg flex flex-col gap-2 ${expanded? "px-3" : "items-center"}`}>
                 <ul className="flex flex-col flex-3 border-b border-slate-300 pb-2">
                     
-                    <li className="cursor-pointer h-full flex p-2 items-center hover:bg-azul-100 hover:text-azul-600 rounded-lg transition-all duration-300 truncate"><div className={`flex min-w-10 ${expanded? "" : "justify-center"}`}><LayoutPanelLeft/></div><div className={`${expanded? "flex-grow" : "overflow-hidden transition-all w-0"}`}>Painel</div></li>
+                    <Link to="/inicio"><li className="cursor-pointer h-full flex p-2 items-center hover:bg-azul-100 hover:text-azul-600 rounded-lg transition-all duration-300 truncate"><div className={`flex min-w-10 ${!expanded && "justify-center"}`}><LayoutPanelLeft/></div><div className={`${expanded? "flex-grow" : "overflow-hidden transition-all w-0"}`}>Início</div></li></Link>
 
-                    <li className="cursor-pointer h-full flex p-2 items-center hover:bg-azul-100 hover:text-azul-600 rounded-lg transition-all duration-300 truncate"><div className={`flex min-w-10 ${expanded? "" : "justify-center"}`}><NotebookPen/></div><div className={`${expanded? "flex-grow" : "overflow-hidden transition-all w-0"}`}>Pedidos</div></li>
-
-                    <li className="cursor-pointer h-full flex p-2 items-center hover:bg-azul-100 hover:text-azul-600 rounded-lg transition-all duration-300 truncate"><div className={`flex min-w-10 ${expanded? "" : "justify-center"}`}><BookOpenText/></div><div className={`${expanded? "flex-grow" : "overflow-hidden transition-all w-0"}`}>Cardápio</div></li>
-
-                    <li className="cursor-pointer h-full flex p-2 items-center hover:bg-azul-100 hover:text-azul-600 rounded-lg transition-all duration-300 truncate"><div className={`flex min-w-10 ${expanded? "" : "justify-center"}`}><PackageOpen/></div><div className={`${expanded? "flex-grow" : "overflow-hidden transition-all w-0"}`}>Estoque</div></li>
-
-                    <li className="cursor-pointer h-full flex p-2 items-center hover:bg-azul-100 hover:text-azul-600 rounded-lg transition-all duration-300 truncate"><div className={`flex min-w-10 ${expanded? "" : "justify-center"}`}><ChartSpline/></div><div className={`${expanded? "flex-grow" : "overflow-hidden transition-all w-0"}`}>Relatórios</div></li>
-
-                    <li className="cursor-pointer h-full flex p-2 items-center hover:bg-azul-100 hover:text-azul-600 rounded-lg transition-all duration-300 truncate"><div className={`flex min-w-10 ${expanded? "" : "justify-center"}`}><ChefHat/></div><div className={`${expanded? "flex-grow" : "overflow-hidden transition-all w-0"}`}>Modo Produção</div></li>
-
+                    <Link to = "/pedidos"><li className="cursor-pointer h-full flex p-2 items-center hover:bg-azul-100 hover:text-azul-600 rounded-lg transition-all duration-300 truncate"><div className={`flex min-w-10 ${!expanded && "justify-center"}`}><NotebookPen/></div><div className={`${expanded? "flex-grow" : "overflow-hidden transition-all w-0"}`}>Pedidos</div></li></Link>
+                    
+                    <Link to = "/cardapio"><li className="cursor-pointer h-full flex p-2 items-center hover:bg-azul-100 hover:text-azul-600 rounded-lg transition-all duration-300 truncate"><div className={`flex min-w-10 ${!expanded && "justify-center"}`}><BookOpenText/></div><div className={`${expanded? "flex-grow" : "overflow-hidden transition-all w-0"}`}>Cardápio</div></li></Link>
+                    
+                    <Link to = "estoque"><li className="cursor-pointer h-full flex p-2 items-center hover:bg-azul-100 hover:text-azul-600 rounded-lg transition-all duration-300 truncate"><div className={`flex min-w-10 ${!expanded && "justify-center"}`}><PackageOpen/></div><div className={`${expanded? "flex-grow" : "overflow-hidden transition-all w-0"}`}>Estoque</div></li></Link>
+                    
+                    <Link to = "relatorios"><li className="cursor-pointer h-full flex p-2 items-center hover:bg-azul-100 hover:text-azul-600 rounded-lg transition-all duration-300 truncate"><div className={`flex min-w-10 ${!expanded && "justify-center"}`}><ChartSpline/></div><div className={`${expanded? "flex-grow" : "overflow-hidden transition-all w-0"}`}>Relatórios</div></li></Link>
+                    
+                    <Link to = "producao"><li className="cursor-pointer h-full flex p-2 items-center hover:bg-azul-100 hover:text-azul-600 rounded-lg transition-all duration-300 truncate"><div className={`flex min-w-10 ${!expanded && "justify-center"}`}><ChefHat/></div><div className={`${expanded? "flex-grow" : "overflow-hidden transition-all w-0"}`}>Modo Produção</div></li></Link>
+                
                 </ul>
                 <ul className="flex flex-col flex-1 justify-around">
-
-                    <li className="cursor-pointer h-full flex p-2 items-center hover:bg-azul-100 hover:text-azul-600 rounded-lg transition-all duration-300 truncate"><div className={`flex min-w-10 ${expanded? "" : "justify-center"}`}><Info/></div><div className={`${expanded? "flex-grow" : "overflow-hidden transition-all w-0"}`}>Ajuda</div></li>
-
-                    <li className="cursor-pointer h-full flex p-2 items-center hover:bg-azul-100 hover:text-azul-600 rounded-lg transition-all duration-300 truncate"><div className={`flex min-w-10 ${expanded? "" : "justify-center"}`}><Settings /></div><div className={`${expanded? "flex-grow" : "overflow-hidden transition-all duration-300 w-0"}`}>Configurações</div></li>
+                    <Link to = "ajuda"><li className="cursor-pointer h-full flex p-2 items-center hover:bg-azul-100 hover:text-azul-600 rounded-lg transition-all duration-300 truncate"><div className={`flex min-w-10 ${!expanded && "justify-center"}`}><Info/></div><div className={`${expanded? "flex-grow" : "overflow-hidden transition-all w-0"}`}>Ajuda</div></li></Link>
+                    
+                    <Link to = "ajustes"><li className="cursor-pointer h-full flex p-2 items-center hover:bg-azul-100 hover:text-azul-600 rounded-lg transition-all duration-300 truncate"><div className={`flex min-w-10 ${!expanded && "justify-center"}`}><Settings /></div><div className={`${expanded? "flex-grow" : "overflow-hidden transition-all duration-300 w-0"}`}>Configurações</div></li></Link>
+                    
 
                 </ul>
         </nav>

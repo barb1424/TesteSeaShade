@@ -1,20 +1,19 @@
 import Sidebar from "../components/Sidebar"
-import { Undo2, } from 'lucide-react';
-import { PiUmbrellaFill } from "react-icons/pi";
+import HeaderLogged from "../components/HeaderLogged"
+import IconList from "../components/IconList"
+import { Link } from 'react-router-dom';
 
 const NovoPedido = () => {
+const link = "";
+const quantidade = 14;    
     return(
         <div className="text-slate-600 flex h-screen ">
             <Sidebar/>
-            <div className="flex flex-col w-full ml-16 py-4 px-4 gap-4">
-            <header className="flex justify-between">
-                <button><Undo2 size="30"/></button>
-                <button className="bg-orange-500 text-slate-50 font-medium rounded px-3 py-0.5 shadow-sm">Novo Pedido</button>
-            </header>
+            <div className="flex flex-col w-full ml-16 py-4 px-4">
+            <HeaderLogged hasUndo link="/Pedidos">Novo Pedido</HeaderLogged>
             <main className="h-full">
-                <h1 className="text-2xl font-bold">Abrir Pedido</h1>
                 <form>
-                    <fieldset className="flex flex-col gap-2 my-3">
+                    <fieldset className="flex flex-col gap-3 my-5">
                         <label>
                             <input
                             className="inset-shadow-xs focus:ring focus:outline-none focus:border-indigo-600 bg-white py-4 lg:py-3 px-5 rounded border border-slate-300 text-slate-900 w-full" 
@@ -31,34 +30,23 @@ const NovoPedido = () => {
                             placeholder="Número do guarda-sol"/>
                         </label>
 
-                        <label className="flex justify-between items-center">
+                        <label className="flex justify-between items-center text-lg">
                             Pedido rápido
-                            <input type="checkbox" className="transform scale-120"/>
+                            <input type="checkbox" className="transform scale-123"/>
                         </label>
 
                         <label>
                             <textarea className="inset-shadow-xs focus:ring focus:outline-none focus:border-indigo-600 bg-white py-4 lg:py-3 px-5 rounded border border-slate-300 text-slate-900 w-full" rows="4" cols="50" placeholder="Observações"></textarea>
                         </label>
 
-                        <button className="shadow-sm bg-indigo-600 text-slate-50 font-medium rounded py-2">Criar comanda</button>
+                        <button className="cursor-pointer shadow-sm bg-indigo-600 text-slate-50 font-medium rounded py-2">Criar comanda</button>
                     </fieldset>
                 </form>
-                <div className="text-amber-500 flex flex-col bg-yellow-100 rounded-lg p-2 gap-2">
-                    <div className=" font-bold flex justify-center text-xl">Guarda-sóis: 13</div>
-                    <div className="flex flex-wrap itens-center justify-center gap-1">
-                    <PiUmbrellaFill size="49"/>
-                    <PiUmbrellaFill size="49"/>
-                    <PiUmbrellaFill size="49"/>
-                    <PiUmbrellaFill size="49"/>
-                    <PiUmbrellaFill size="49"/>
-                    <PiUmbrellaFill size="49"/>
-                    <PiUmbrellaFill size="49"/>
-                    <PiUmbrellaFill size="49"/>
-                    <PiUmbrellaFill size="49"/>
-                    <PiUmbrellaFill size="49"/>
-                    <PiUmbrellaFill size="49"/>
-                    <PiUmbrellaFill size="49"/>
-                    <PiUmbrellaFill className="text-red-500" size="49"/>
+                <div className="flex flex-col gap-2">
+                    <p className="text-lg font-bold">Guarda-sóis: <span className="text-orange-500">{quantidade}</span></p>
+                    <div className="flex">
+                        {/* Implementar numeração nos guarda-sóis e função ocupado ou livre. Torna-los clicáveis. O guarda-sol clicado o numero irá para o input; Se estiver ocupado a cor do icone será text-red-500 */}
+                     <IconList quantidade={quantidade}/>
                     </div>
                 </div>
             </main>

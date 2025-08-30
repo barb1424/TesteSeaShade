@@ -2,6 +2,7 @@ import Header from '../components/Header'
 import decoracaolg from "../assets/decoracaolg2.webp";
 import decoracaosm from "../assets/decoracaosm2.webp";
 import { Link } from 'react-router-dom';
+import ArrowButton from '../components/ArrowButton'
 
 
 const Home = () => {
@@ -25,9 +26,9 @@ const Home = () => {
             Gerencie <span className="text-yellow-300 font-medium">pedidos</span>, <span className="text-yellow-300 font-medium">estoque</span> e <span className="text-yellow-300 font-medium">mesas</span> com praticidade.
           </p>
           <div className="flex flex-col md:flex-row mt-8 justify-start">
-            <Link to="/cadastro" className="bg-linear-to-r from-amber-600 to-orange-600 text-slate-50 lg:px-24 cursor-pointer md:text-xl text-2xl py-4 text-center md:px-25">Comece já</Link>
-            <button className="text-slate-50 lg:px-24 cursor-pointer md:text-xl text-2xl py-4
-            text-center md:px-25">Saiba mais</button>
+            <Link
+            to="/cadastro" className="bg-gradient-to-r from-amber-600 to-orange-600 text-slate-50 lg:px-24 md:px-25 cursor-pointer md:text-xl text-2xl py-4 text-center">Comece já</Link>
+            <ArrowButton>SaibaMais</ArrowButton>
           </div>
         </main>
       </div>

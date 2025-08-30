@@ -7,41 +7,44 @@ const NovoPedido = () => {
 const link = "";
 const quantidade = 14;    
     return(
-        <div className="text-slate-600 flex h-screen ">
+        <div className="text-slate-600 flex h-screen">
             <Sidebar/>
-            <div className="flex flex-col w-full ml-16 py-4 px-4">
+            <div className="flex flex-col w-full pl-20 py-4 px-4">
             <HeaderLogged hasUndo link="/Pedidos">Novo Pedido</HeaderLogged>
-            <main className="h-full">
-                <form>
-                    <fieldset className="flex flex-col gap-3 my-5">
-                        <label>
+            <main className="h-full flex justify-between">
+                <div className="flex flex-col">
+                    <h1 className="text-2xl font-bold">Abrir Pedido</h1>
+                    <form>
+                        <fieldset className="flex flex-col gap-3 my-5">
+                         <label>
                             <input
                             className="inset-shadow-xs focus:ring focus:outline-none focus:border-indigo-600 bg-white py-4 lg:py-3 px-5 rounded border border-slate-300 text-slate-900 w-full" 
                             type="text" 
                             name=""
                             placeholder="Atendente"/>
-                        </label>
+                         </label>
 
-                        <label>
+                         <label>
                             <input
                             className="inset-shadow-xs focus:ring focus:outline-none focus:border-indigo-600 bg-white py-4 lg:py-3 px-5 rounded border border-slate-300 text-slate-900 w-full" 
                             type="text" 
                             name=""
                             placeholder="Número do guarda-sol"/>
-                        </label>
+                         </label>
 
-                        <label className="flex justify-between items-center text-lg">
+                            <label className="flex justify-between items-center text-lg">
                             Pedido rápido
                             <input type="checkbox" className="transform scale-123"/>
-                        </label>
+                         </label>
 
-                        <label>
+                         <label>
                             <textarea className="inset-shadow-xs focus:ring focus:outline-none focus:border-indigo-600 bg-white py-4 lg:py-3 px-5 rounded border border-slate-300 text-slate-900 w-full" rows="4" cols="50" placeholder="Observações"></textarea>
-                        </label>
+                         </label>
 
-                        <button className="cursor-pointer shadow-sm bg-indigo-600 text-slate-50 font-medium rounded py-2">Criar comanda</button>
-                    </fieldset>
-                </form>
+                            <button className="cursor-pointer shadow-sm bg-indigo-600 text-slate-50 font-medium rounded py-2">Criar comanda</button>
+                        </fieldset>
+                    </form>
+                </div>
                 <div className="flex flex-col gap-2">
                     <p className="text-lg font-bold">Guarda-sóis: <span className="text-orange-500">{quantidade}</span></p>
                     <div className="flex">

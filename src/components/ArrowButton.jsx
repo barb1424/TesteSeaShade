@@ -9,6 +9,7 @@ const ArrowButton = ({children}) => {
         cursor-pointer
         md:text-xl text-2xl
         my-4
+        pl-8
         text-center
         flex items-center justify-center gap-2
         group                                

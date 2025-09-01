@@ -2,6 +2,7 @@ import Header from '../components/Header';
 import { useState } from 'react';
 import { PiUserCirclePlus } from "react-icons/pi";
 import { Link } from 'react-router-dom';
+import Footer from '../components/Footer'
 
 const Cadastro = () => {
  const[email, setEmail] = useState('');

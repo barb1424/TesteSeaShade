@@ -10,7 +10,7 @@ const Header = () => {
   return (
     <header className="bg-sky-600 text-white py-5 relative z-20">
       {/* Container interno para o conteúdo, com padding e centralização */}
-      <div className="max-w-screen-xl mx-auto flex items-center justify-between px-4">
+      <div className="max-w-screen-xl mx-auto flex items-center justify-between">
         {/* Logo */}
         <Link to="/">
           <img src={logo} alt="SeaShade Logo" className="max-w-24 md:max-w-36 sm:max-w-35 object-cover" />

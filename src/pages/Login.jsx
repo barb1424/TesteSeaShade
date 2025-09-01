@@ -7,12 +7,12 @@ const Login = () => {
  const[email, setEmail] = useState('');
  const[pass, setPass] = useState('')
   return (
-    <div className="bg-slate-100 min-h-screen flex flex-col gap-1 md:gap-6">
+    <div className="bg-slate-50 min-h-screen flex flex-col gap-1 md:gap-6">
       <Header />
         <main className="m-3 flex-1 flex flex-col items-center gap-5">
           <div className="flex flex-col items-center">
-        <h1 className="  flex-wrap flex items-center text-3xl font-medium px-4 py-4 text-indigo-950 gap-3"><PiUserCircle size="35" strokeWidth={4}/> Entre na sua conta</h1>
-       <h2 className="text-indigo-800 text-center flex-wrap">Não tem uma conta ainda? <Link to="/cadastro"><span className="border-b hover:text-indigo-600">cadastre-se aqui</span></Link></h2>
+        <h1 className="  flex-wrap flex items-center text-4xl font-medium px-4 py-4 text-indigo-950 gap-3"><PiUserCircle size="35" strokeWidth={4}/>Entre na sua conta</h1>
+       <h2 className="text-indigo-800 text-center flex-wrap">Novo por aqui? <Link to="/cadastro"><span className="border-b hover:text-indigo-600">Cadastre-se</span></Link></h2>
         </div>
         <form className="w-full md: md:max-w-md max-w-sm mx-auto">
           <fieldset className="w-full flex flex-col gap-3">
@@ -39,7 +39,7 @@ const Login = () => {
             </label>
             <div className="text-xl flex flex-col gap-1">
           <button className="flex flex-col bg-orange-500 text-white py-4 lg:py-3 font-medium transition-color duration-300 hover:bg-orange-400 cursor-pointer w-full" type="submit">Cadastrar</button>
-          <button className=" text-orange-500 py-3 cursor-pointer w-full" type="submit">Esqueci minha senha</button>
+          <button className=" text-orange-500 py-3 cursor-pointer w-full hover:text-orange-400" type="submit">Esqueci minha senha</button>
           </div>
           </fieldset>
         </form>

@@ -12,6 +12,7 @@
   "dependencies": {
     "@popperjs/core": "^2.11.8",
     "@tailwindcss/vite": "^4.1.12",
+    "animate.css": "^4.1.1",
     "bootstrap": "^5.3.7",
     "lucide-react": "^0.542.0",
     "react": "^19.1.0",

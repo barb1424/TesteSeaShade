@@ -8,9 +8,9 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="bg-sky-600 text-white py-5 relative z-20">
+    <header className="bg-sky-600 text-white py-5 relative z-20 pl-5 pr-3.5">
       {/* Container interno para o conteúdo, com padding e centralização */}
-      <div className="max-w-screen-xl mx-auto flex items-center justify-between">
+      <div className="max-w-screen-2xl mx-auto flex items-center justify-between">
         {/* Logo */}
         <Link to="/">
           <img src={logo} alt="SeaShade Logo" className="max-w-24 md:max-w-36 sm:max-w-35 object-cover" />
@@ -37,7 +37,7 @@ const Header = () => {
       {/* Botão de abrir Menu Hamburguer para Mobile */}
       <Menu
         onClick={() => setIsMenuOpen(true)}
-        className={`text-slate-50 md:hidden cursor-pointer absolute right-4 top-1/2 -translate-y-1/2`}
+        className={`text-slate-50 md:hidden cursor-pointer absolute right-0 top-1/2 -translate-y-1/2`}
         size="50"
       />
 
@@ -79,7 +79,7 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <Link to="/login" className="bg-gradient-to-r from-amber-600 to-orange-600 rounded-sm font-medium justify-center flex items-center gap-2 p-4" onClick={() => setIsMenuOpen(false)}>
+            <Link to="/login" className="shadow-sm hover:brightness-110 transition-all duration-300 bg-gradient-to-r from-amber-600 to-orange-600 rounded-sm font-medium justify-center flex items-center gap-2 p-4" onClick={() => setIsMenuOpen(false)}>
               <div className="gap-2 flex justify-center items-center w-8"><PiUserCircle /></div>
               Entrar / Cadastrar-se
             </Link>

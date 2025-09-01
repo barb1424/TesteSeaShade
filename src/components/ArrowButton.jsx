@@ -1,4 +1,4 @@
-import { ArrowRight, ChevronRight } from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
 
 const ArrowButton = ({children}) => {
    return (
@@ -9,23 +9,22 @@ const ArrowButton = ({children}) => {
         cursor-pointer
         md:text-xl text-2xl
         my-4
-        pl-8
-        text-center
+        pl-8 md:pl-0
         flex items-center justify-center gap-2
         group                                
         transition-all duration-300          
       "
     >
-      <span>Saiba mais</span>
+      <span>{children}</span>
 
-      <ChevronRight 
+      <ChevronDown 
         size={24}
         className="
           opacity-0 
-          translate-x-full 
+          -translate-y-full
           transition-all duration-300 ease-in-out
           group-hover:opacity-100 
-          group-hover:translate-x-0
+          group-hover:-translate-y-0
         "
       />
     </button>

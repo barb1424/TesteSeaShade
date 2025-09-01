@@ -15,7 +15,7 @@ const Cadastro = () => {
         <main className="m-3 flex-1 flex flex-col items-center gap-5">
           <div className="flex flex-col items-center">
         <h1 className="  flex-wrap flex items-center text-4xl font-medium px-4 py-4 text-indigo-950 gap-3"><PiUserCirclePlus size="35" strokeWidth={4}/>Faça seu cadastro</h1>
-        <h2 className="text-indigo-800 text-center flex-wrap">Já tem uma conta? <Link to="/login"><span className="border-b hover:text-indigo-600">Entrar .</span></Link></h2>
+        <h2 className="text-indigo-800 text-center flex-wrap">Já tem uma conta? <Link to="/login"><span className="border-b hover:text-indigo-600">Entrar</span></Link></h2>
         </div>
         <form className="w-full md: md:max-w-md max-w-sm mx-auto">
           <fieldset className="w-full flex flex-col gap-3">
